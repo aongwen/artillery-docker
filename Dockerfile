@@ -1,10 +1,10 @@
-FROM node:8-alpine
-MAINTAINER Hassy Veldstra <h@artillery.io>
+FROM node:10-alpine
+LABEL maintainer="team@artillery.io"
 
 VOLUME /artillery
 WORKDIR /artillery
 
-RUN npm install -g artillery@1.6.0-2
+RUN npm install -g artillery
 
 ENTRYPOINT ["artillery"]
 CMD ["--help"]
